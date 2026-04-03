@@ -1,6 +1,7 @@
 class GaragePage {
   get addCarButton() {
-    return cy.get('button.btn.btn-primary').contains('Add car')
+    return cy.get('.panel-page_heading.d-flex.justify-content-between')
+      .find('button.btn.btn-primary')
   }
 
   get addCarForm() {

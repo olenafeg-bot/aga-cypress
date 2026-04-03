@@ -44,9 +44,9 @@ class FuelExpenses {
       this.footer.find('.btn.btn-primary').contains('Add').click()
   }
   fuelExpensesIsAdded(mileage, liters, totalCost) {
-    cy.get('table.table.expenses_table').should('contain.text', mileage)
-    cy.get('table.table.expenses_table').should('contain.text', liters)
-    cy.get('table.table.expenses_table').should('contain.text', totalCost)
+    cy.get('table.table.expenses_table').should('contain.text', `Mileage: ${mileage}`)
+    cy.get('table.table.expenses_table').should('contain.text', `Liters: ${liters}`)
+    cy.get('table.table.expenses_table').should('contain.text', `Total Cost: ${totalCost}`)
   }
 }
 

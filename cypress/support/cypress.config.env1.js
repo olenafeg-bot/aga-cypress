@@ -10,5 +10,11 @@ module.exports = defineConfig({
     baseUrl: "https://guest:welcome2qauto@qauto.forstudy.space/",
     fixturesFolder: "cypress/fixtures",
     specPattern: "**/*.cy.{js,jsx,ts,tsx}"
-  }
+  },
+  reporter: 'cypress-mochawesome-reporter',
+  e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+  },
 });

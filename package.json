@@ -1,5 +1,14 @@
 {
+  "name": "aga-cypress",
+  "version": "1.0.0",
+  "scripts": {
+    "test:env1": "cypress run --config-file cypress/support/cypress.config.env1.js",
+    "test:env2": "cypress run --config-file cypress/support/cypress.config.env2.js",
+    "open:env1": "cypress open --config-file cypress/support/cypress.config.env1.js",
+    "open:env2": "cypress open --config-file cypress/support/cypress.config.env2.js"
+  },
   "devDependencies": {
-    "cypress": "^15.11.0"
+    "cypress": "^15.11.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
   }
 }
