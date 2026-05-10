@@ -1,0 +1,19 @@
+name: Test in Docker Cypress
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/included:15.11.0
+    env:
+      baseUrl: "https://guest:welcome2qauto@qauto.forstudy.space/"
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6

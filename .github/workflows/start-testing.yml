@@ -8,16 +8,13 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     env:
-      BASE_URL: https://qauto.forstudy.space/
-      HTTP_USERNAME: guest
-      HTTP_PASSWORD: welcome2auto
-
+      baseUrl: "https://guest:welcome2qauto@qauto.forstudy.space/"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '24'
 

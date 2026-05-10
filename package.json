@@ -6,7 +6,8 @@
     "test:env2": "cypress run --config-file cypress/support/cypress.config.env2.js",
     "open:env1": "cypress open --config-file cypress/support/cypress.config.env1.js",
     "open:env2": "cypress open --config-file cypress/support/cypress.config.env2.js",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run --spec 'cypress/e2e/CarTest.cy.js, cypress/e2e/RegistrationTest.cy.js'"
+    
   },
   "devDependencies": {
     "cypress": "^15.11.0",
