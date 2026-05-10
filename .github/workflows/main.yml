@@ -1,0 +1,24 @@
+name: Cypress tests
+on: 
+  issues:
+    types: opened
+
+jobs:
+  cypress-run:
+    name: Cypress run
+    runs-on: ubuntu-22.04
+    container:
+      image: cypress/browsers:node-24.14.1-chrome-146.0.7680.177-1-ff-149.0.2-edge-146.0.3856.97-1
+      options: --user 1001
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          spec: cypress/e2e/1-getting-started/Login.cy.js
