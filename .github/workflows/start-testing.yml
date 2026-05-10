@@ -11,7 +11,7 @@ jobs:
       BASE_URL: https://qauto.forstudy.space/
       HTTP_USERNAME: guest
       HTTP_PASSWORD: welcome2auto
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
